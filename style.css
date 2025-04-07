@@ -1,0 +1,241 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f7f9fc;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 32px;
+}
+
+#score-display, #timer {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#timer {
+    color: #3498db;
+}
+
+.problem-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    letter-spacing: 2px;
+    color: #2c3e50;
+}
+
+#inputs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+label.leading {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+input {
+    padding: 10px;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+input.leading {
+    border-color: #e74c3c;
+}
+
+input.duplicate {
+    background-color: #ffecb3;
+    border-color: #ff9800;
+    animation: shake 0.5s;
+}
+
+input.error {
+    background-color: #ffccbc;
+    border-color: #e74c3c;
+    animation: shake 0.5s;
+}
+
+input.correct {
+    background-color: #c8e6c9;
+    border-color: #4caf50;
+}
+
+input.incorrect {
+    background-color: #ffccbc;
+    border-color: #e74c3c;
+}
+
+input.hint {
+    background-color: #bbdefb;
+    border-color: #2196f3;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#hint {
+    background-color: #f39c12;
+}
+
+#hint:hover {
+    background-color: #d35400;
+}
+
+#skip {
+    background-color: #95a5a6;
+}
+
+#skip:hover {
+    background-color: #7f8c8d;
+}
+
+#message {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+#message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+#message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+#message.warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+#message.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.rules {
+    margin-top: 20px;
+    text-align: left;
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+    font-size: 14px;
+}
+
+.rules p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.rules ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .problem-text {
+        font-size: 20px;
+    }
+    
+    input {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
